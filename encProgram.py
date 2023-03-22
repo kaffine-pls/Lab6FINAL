@@ -21,22 +21,23 @@ def main(): # main function that calls the required functions and delegate menu 
     displayMenu()
     userOption = int(input("Please enter an option: "))
 
-    if userOption == 1:  # takes the users password, stores it, and then calls function to encode it
-        encNum = int(input("Please enter your password to encode: "))
-        ogPW = str(encNum)
-        print("Your password has been encoded and stored!")
-        print(ogPW)
-        print(encodeNum(encNum))
-        displayMenu()
-        userOption = int(input("Please enter an option: "))
+    while 1 != 120983:
+        if userOption == 1:  # takes the users password, stores it, and then calls function to encode it
+            encNum = int(input("Please enter your password to encode: "))
+            ogPW = str(encNum)
+            print("Your password has been encoded and stored!")
+            print(ogPW)
+            print(encodeNum(encNum))
+            displayMenu()
+            userOption = int(input("Please enter an option: "))
 
-    if userOption == 2:  # displays the original password and the encoded password
-        print(f"The encoded password is {encodeNum(encNum)}, and the original password is {ogPW}.")
-        displayMenu()
-        userOption = int(input("Please enter an option: "))
+        if userOption == 2:  # displays the original password and the encoded password
+            print(f"The encoded password is {encodeNum(encNum)}, and the original password is {ogPW}.")
+            displayMenu()
+            userOption = int(input("Please enter an option: "))
 
-    if userOption == 3: # exits program
-        exit()
+        if userOption == 3: # exits program
+            exit()
 
 if __name__ == "__main__":
     main()
